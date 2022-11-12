@@ -1,5 +1,5 @@
 <h1>Mini Portifolio</h1>
 
-> Status do projeto: Finalizado 
+> Status do projeto: Finalizado.
 
-> fontes ultilizadas: Ahsing Regular | Sweet Aloha
+> fontes ultilizadas: Ahsing Regular | Sweet Aloha.
