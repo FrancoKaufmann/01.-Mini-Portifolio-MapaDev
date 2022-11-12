@@ -2,4 +2,4 @@
 
 > Status do projeto: Finalizado 
 
-> fontes ultilizadas :Ahsing Regular | Sweet Aloha
+> fontes ultilizadas: Ahsing Regular | Sweet Aloha
