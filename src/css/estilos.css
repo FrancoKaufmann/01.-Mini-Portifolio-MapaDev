@@ -1,22 +1,15 @@
-
-@font-face {
-    font-family: 'Ahsing-Regular';
-    src: url('../css/fonts/Ahsing-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* Fontes */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 
+/* -----Body---- */
 body{
     background-image: url(../imagens/Fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    font-family:'Ahsing-Regular';
-    font-weight: normal;
-    color: #fdae52;
-    font-size: 18px;
+    font-family:'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,65 +17,77 @@ body{
     padding: 30px;
 }
 
+/* card principal */
 .cartao{
-    background-color: #f7efd8;
-    background-image: url(../imagens/Fundo-cartao.jpg);
-    width: 370px;
-    border: 5px solid #f2cd4f;
-    border-radius: 10px;
+    background-color: #fbfaf8;
+    width: 30%;
+    border-radius: 15px;
     overflow: hidden;
 }
-
+/* -----minhas informaçoes (nome/cargo)----*/
+/* centralizando as infos */
 .cartao .minhas-informacoes{
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
 
+/* img do card */
 .cartao .minhas-informacoes img{
+    transform: scale(1.2);
     border-radius: 50px;
-    border: 4px solid #fdae52;    
+    border: 2px solid #FBB119    
 }
 
 .cartao .minhas-informacoes img{
-    height: 96px;
-    width: 96px;
+    height: 100px;
+    width: 100px;
 }
 
+/* meu nome no card */
 .cartao .minhas-informacoes .nome{
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: 20px;
+    color: #FBB119;
+    font-weight: 900;
 }
 
+/* meu cargo do card */
 .cartao .minhas-informacoes .cargo{
     font-size: 20px;
-    color: #fdae52;
-    font-family: 'VT323', monospace;
+    font-weight: 400;
+    color: #fbcb99;
+    margin-bottom: 40px;
+    
 }
 
-.cartao .conteudo{
-    margin-top: 15px;
-}
-
+/* ------Parte dos icones do cars-----*/
+/* deixando as abas dos icones ao lado */
 .cartao .abas{
     display: flex;
 }
 
+/* definindo tamanho */
 .cartao .abas .aba{
     width: 50%;
     display: flex;
     justify-content: center;
-    padding: 8px 0;
+    align-items: center;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.cartao .abas img{
-    width: 40px;
+/* cor do icone */
+.fa-face-smile, .fa-hashtag{
+    color: #FBB119;
 }
 
-.cartao .abas .aba.selecionado{
+/* estilo da aba selecionada */
+.cartao .abas .aba.selecionado {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 50px;
     background-color: #442b2a;
     object-fit: contain;
 }
@@ -92,11 +97,14 @@ body{
 }
 
 .cartao .abas .aba:hover{
-    background-color: #463332;
+    background-color: #463332f7;
+    border-radius: 0px;
+    transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/* ---Pith sobre mim--- */
+
 .informacoes-abas .informacao{
-    min-height: 260px;
     padding: 20px;
     display: none;
 }
@@ -106,59 +114,105 @@ body{
 
 }
 
+/* Estilizando o titulo pith */
 .informacoes-abas .sub-titulo{
-    font-size: 25px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fbfaf8;
     margin-bottom: 25px;
     text-align: center;
-    font-family: 'Ahsing-Regular';
 }
 
+/* estilizando o pith */
 .informacoes-abas .descricao{
-    font-size: 18px;
+    font-size: 1.2rem;
     max-height: 180px;
     overflow-y: auto;
     padding-right: 5px;
-    font-family: 'VT323', monospace;
+    color: #faf6ee;
+    font-weight: 400;
 }
 
 .informacoes-abas .descricao span{
     color: #f2cd4f;
 }
 
+/* Segunda aba */
 .redes-sociais{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
     max-height: 180px;
     overflow-y: auto;
 }
 
-.redes-sociais li a{    
+/* tamanho do botão */
+.redes-sociais li { 
+    cursor: pointer;   
     width: 250px;
-    display: block;
-    color: #f3f3f3;
-    text-align: center;
     padding: 10px;
-    font-size: 20px;
-    transition: opacity 0.3s ease-in-out;
+    font-size: 1.3rem;
+    font-weight: 500;
+    
 }
 
-.redes-sociais li a:hover{
-    opacity: 0.8;
+.redes-sociais li:hover {
+    transform: scale(0.9);
+    transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.redes-sociais .curriculo{
+/* botão curriculo */
+.fa-clipboard {
+    padding-right: 10px;
+    color: #faf6ee;
+}
+.curriculo {
+    color: #fbfaf8;
+}
+
+.redes-sociais li:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:#f2cd4f;
-    font-family: 'VT323', monospace;
+    border-radius: 10px;
 }
 
-.redes-sociais .linkedin{
-    background-color: #f2cd4f;
-    font-family: 'VT323', monospace;
+/* botão linkedin */
+.fa-linkedin-in {
+    padding-right: 10px;
+    color: #faf6ee;
 }
 
-.redes-sociais .github{
-    background-color: #f2cd4f;
-    font-family: 'VT323', monospace;
+.linkedin {
+    color: #fbfaf8;
 }
+
+.redes-sociais li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f2cd4f;
+    border-radius: 10px;
+}
+
+/* botão github */
+
+.fa-github {
+    padding-right: 10px;
+    color: #faf6ee;
+}
+
+.github {
+    color: #fbfaf8;
+}
+
+.redes-sociais li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f2cd4f;
+    border-radius: 10px;
+}
+
